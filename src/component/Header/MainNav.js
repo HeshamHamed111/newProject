@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faCartArrowDown, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
 
 import './header.css';
 
@@ -27,11 +26,11 @@ class MainNav extends Component {
                             </div>
                             <div className="col-lg-1">
                             
-                                 <p className="counter-cart">
-                                 <Link to='/MenuCart'>
+                                 <p style={{cursor: "pointer"}} className="counter-cart" onClick={() => this.props.handlerToggle()}>
+                                
                                     <span> {this.props.counter} </span>
                                     <FontAwesomeIcon icon={faCartArrowDown} /> Cart
-                                 </Link>
+                              
                                  </p>
                             </div>
                             <div className="col-lg-1">

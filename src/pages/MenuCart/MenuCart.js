@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-import {Link} from 'react-router-dom';
 
 import './cart.css';
 
@@ -14,14 +13,11 @@ class MenuCart extends Component {
     render() {
         return (
             <div className="menu-cart">
-            <Link to='/'><div className="overlay"></div> </Link>
+            <div className="overlay" onClick={() => this.props.handlerToggle()}></div>
                 <div className="cart">
-                    <p>
-                    <Link to='/'>
-                    <FontAwesomeIcon icon={faXmark} />
-                    </Link>
-                    </p>
+                    <p onClick={() => this.props.handlerToggle()} style={{cursor: "pointer"}}> <FontAwesomeIcon icon={faXmark} /></p>
                     <p>My Cart</p>
+                   
                     <div className="summary">
                         <p>Cart Summary</p>
                     </div>

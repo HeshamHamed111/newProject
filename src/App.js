@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import Index from './pages/Index/index';
 import MainNav from './component/Header/MainNav';
 import NavTop from './component/Header/NavTop';
 import MenuCart from './pages/MenuCart/MenuCart';
-import NotFound from './NotFound';
+
 
 import './App.css';
 
@@ -17,7 +16,8 @@ class App extends Component {
     name: '', 
     quantity: 0, 
     price: 0, 
-    counter: 0
+    counter: 0, 
+    toggle: false
   }
   handlerState = (imgUrl, name, quantity, price) => {
     this.setState({imgState: imgUrl, name: name, quantity: quantity, price: price})
@@ -28,21 +28,22 @@ class App extends Component {
   handlerCounter = (num) => {
     this.setState({...this.state, counter: num})
 }
+  handlerToggle = () => {
+    this.setState({...this.state, toggle: !this.state.toggle})
+  }
     render() {
         return (
-          <Router>     
+     
           <div className="App">
-          <NavTop />
-          <MainNav counter={this.state.counter} />
+            <NavTop />
+            <MainNav counter={this.state.counter} handlerToggle={this.handlerToggle} />
+            <Index handelState={this.handlerState} handelImage={this.handlerImageState} handlerCounter={this.handlerCounter} />
+            
+            {this.state.toggle && <MenuCart statePro={this.state} handlerToggle={this.handlerToggle} /> }
           
-          <Routes>
-
-              <Route path="/" element={<Index handelState={this.handlerState} handelImage={this.handlerImageState} handlerCounter={this.handlerCounter} />} />
-              <Route path="/MenuCart" element={<div><Index handelState={this.handlerState} handelImage={this.handlerImageState} /><MenuCart statePro={this.state} /> </div> } />
-              <Route path="*" element={<NotFound />} />
-          </Routes>
+        
           </div>
-          </Router>
+    
        
         )
     } 
