@@ -7,9 +7,6 @@ import './cart.css';
 
 class MenuCart extends Component {
 
-    state =  {
-        
-    }
     render() {
         return (
             <div className="menu-cart">

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import data from '../../data.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faTwitter } from '@fortawesome/free-solid-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './footer.css';
 
 class Footer extends Component {
@@ -40,10 +39,10 @@ class Footer extends Component {
                         </div>
                         <div className="soical-connect">
                             <ul className="list-unstyled">
-                                <li><img src="/images/facebook.png" alt="Facebook" /> /YESHTERY</li>
-                                <li><img src="/images/Linkedin.png" alt="Linked" /> /YESHTERY</li>
-                                <li><img src="/images/insta.jpg" alt="Linked" /> /YESHTERY</li>
-                                <li><img src="/images/twit.png" alt="Linked" /> /YESHTERY</li>
+                                <li><img src="./images/facebook.png" alt="Facebook" /> /YESHTERY</li>
+                                <li><img src="./images/Linkedin.png" alt="Linked" /> /YESHTERY</li>
+                                <li><img src="./images/insta.jpg" alt="Linked" /> /YESHTERY</li>
+                                <li><img src="./images/twit.png" alt="Linked" /> /YESHTERY</li>
                             </ul>
                         </div>
                     </div>
