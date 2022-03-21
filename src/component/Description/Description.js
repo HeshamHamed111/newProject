@@ -53,7 +53,7 @@ class Description extends Component {
                 </div>
                 <div className="pro-color">
                     <p>Color</p>
-                    <img src="../../../images/tshirt.jpeg" alt="Tshirt" className="active" /><img src="../../../images/tshirtwhite.jpeg" alt="dfs" />
+                    <img src="./images/tshirt.jpeg" alt="Tshirt" className="active" /><img src="./images/tshirtwhite.jpeg" alt="dfs" />
                 </div>
                 <div className="pro-quantity">
                     <p>Quantity</p>

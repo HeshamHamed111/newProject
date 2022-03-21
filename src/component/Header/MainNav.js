@@ -21,7 +21,7 @@ class MainNav extends Component {
                             </div>
                             <div className="col-lg-5">
                                 <div className="logo-adidas">
-                                    <img src="../../../adidas.png" alt="Adidas-Logo" />
+                                    <img src="./adidas.png" alt="Adidas-Logo" />
                                 </div>
                             </div>
                             <div className="col-lg-1">
