@@ -7,7 +7,7 @@ import './product.css';
 class Description extends Component {
 
     state = {
-        imgurl: '/images/tshirt.jpeg',
+        imgurl: './images/tshirt.jpeg',
         quantity: 1,
         name: 'Adidas black T-shirt lorem ipsum dolor sit amet, consecteture adipiscing elit.',
         price: '9,999',
@@ -26,7 +26,7 @@ class Description extends Component {
             <div className="product">
                 <div className="pro-img">
                     <div className="logo-adidas-pro">
-                        <img src="../../../adidas.png" alt="Logo" />
+                        <img src="./adidas.png" alt="Logo" />
                     </div>
                 </div>
                 <div className="pro-description">
